@@ -52,7 +52,7 @@ let [form, setForm] = React.useState({
                     <span>Already have an Account? <Link href={'/login'} className='text-green-400'>Login</Link></span>
                 </div>
                 <div className='text-center mt-5'>
-                    <button type='submit' className='bg-black border-black text-center px-[30px] my-4 scale-[0.95] duration-300 py-[10px] border-2 text-white font-medium max-sm:scale-[0.80] hover:bg-white hover:text-black' data-aos='fade-up'>Submit</button>
+                    <button type='submit' className='bg-black border-black text-center px-[30px] my-4 scale-[0.95] duration-300 py-[10px] border-2 text-white font-medium max-sm:scale-[0.80] hover:bg-white hover:text-black' >Submit</button>
                 </div>
 
             </form>
