@@ -15,6 +15,19 @@ import Testimonials from "./components/Testimonials";
 
 
 export default function Home() {
+    useEffect(() => {
+    axios.post("https://backend-store-bkh1.onrender.com/verify", {}, { withCredentials: true }).then((response) => {
+        const { auth } = response.data;
+        if(auth === true){
+          setVerify(true);
+        }
+      }).catch(() => setVerify(false));
+    axios.post("https://www.caryaati.ca/api/vehicle_list_normal", {type: '501'}, { withCredentials: true }).then((response) => {
+        const result = response.data;
+        console.log(result)
+      }).catch((error) => console.log(error, 'error');
+  }, []);
+
   return (
     <>
     <Header />
